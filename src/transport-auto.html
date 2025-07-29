@@ -20,6 +20,15 @@
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
     <script src="./js/contact.js?v=0.1" type="module"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+      defer
+    ></script>
   </head>
   <body class="overflow-x-hidden">
     <main class="bg-base-200 w-full" id="__main">
@@ -695,45 +704,43 @@
         </div>
       </section>
 
-      <!-- FIXED THUMB -->
-      <section
-        class="hidden h-screen w-full fixed z-50 top-0 bg-neutral bg-opacity-95"
-        fixed_slider
+      <!-- CAROUSEL -->
+      <div
+        carousel
+        class="hidden fixed top-0 bg-black bg-opacity-75 z-40 w-full h-screen"
       >
         <div
-          class="p-2 md:p-4 lg:p-6 flex justify-center items-center w-full h-full"
+          class="swiper w-full h-full relative flex justify-center items-center"
         >
-          <img
-            src=""
-            alt=""
-            fixed_slider_img
-            loading="lazy"
-            class="object-contain object-center h-full w-full"
-          />
-        </div>
-
-        <button
-          type="button"
-          class="absolute top-4 right-4 bg-base-300 rounded-full p-1 hover:bg-base-100"
-          close_img
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-x size-6"
+          <button
+            close_carousel
+            class="bg-white w-fit p-1 rounded-full hover:bg-white/75 absolute right-5 top-5 z-50"
           >
-            <path d="M18 6 6 18" />
-            <path d="m6 6 12 12" />
-          </svg>
-        </button>
-      </section>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="text-black size-8"
+            >
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </button>
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper" slides>
+            <script src="./js/initcarousel-trans.js?v=0.1"></script>
+          </div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
 
       <!-- FOOTER -->
       <footer
@@ -1307,10 +1314,10 @@
       <script src="./js/components/socials.js?v=0.1"></script>
       <script>
         document
-          .querySelectorAll('[auto]')
-          .forEach((e) => e.classList.add('text-info'));
+          .querySelectorAll("[auto]")
+          .forEach((e) => e.classList.add("text-info"));
       </script>
     </main>
-    <script src="./js/openphoto.js?v=0.1" type="module"></script>
+    <script src="./js/carousel.js" type="module"></script>
   </body>
 </html>
