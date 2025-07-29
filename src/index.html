@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ETA-TRUCKLOGISTIC companie de transport international."
+    />
+    <link rel="stylesheet" href="./output.css?v=0.1" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <script src="./js/index.js?v=0.1" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+    <script src="./js/animations.js?v=0.1" defer></script>
+    <script src="./js/i18n.js?v=0.1" type="module"></script>
+    <title>ETA Trucking</title>
+  </head>
+  <body class="overflow-x-hidden">
+    <main class="bg-base-200 w-full relative" id="__main">
+      <!-- NAVBAR -->
+      <nav
+        data-aos="fade-down"
+        class="shadow-2xl shadow-info/20 bg-neutral px-10 md:px-12 lg:px-16 2xl:px-32 fixed top-0 z-40 w-full"
+      >
+        <div class="flex justify-between items-center py-3 lg:py-3 2xl:py-4">
+          <a href="./index.html"
+            ><img
+              data-aos="fade-down"
+              src="./assets/logo.svg"
+              alt=""
+              srcset=""
+              loading="lazy"
+              class="max-xl:size-20"
+          /></a>
+
+          <div id="__open__menu" class="xl:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-menu text-base-100 hover:text-info size-10"
+            >
+              <line x1="4" x2="20" y1="12" y2="12" />
+              <line x1="4" x2="20" y1="6" y2="6" />
+              <line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
+          </div>
+
+          <div
+            class="hidden w-screen max-h-screen fixed z-50 bg-neutral/75 backdrop-blur-lg top-0 left-0 right-0 bottom-0 items-center justify-center"
+            _mini_nav
+          >
+            <div class="absolute top-10 right-10" _close_mini_nav>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-menu text-base-100 hover:text-info size-10"
+              >
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+              </svg>
+            </div>
+            <div>
+              <ul
+                class="text-base-100 text-xl flex flex-col items-center gap-4 font-lato font-semibold text-center"
+              >
+                <li
+                  data-aos="fade-down"
+                  data-aos-delay="100"
+                  class="hover:text-info hover:underline"
+                  acasa
+                >
+                  <a href="./index.html" i18k="navbar.home">ACASA</a>
+                </li>
+                <li
+                  data-aos="fade-down"
+                  data-aos-delay="200"
+                  class="hover:text-info hover:underline"
+                  agabaritic
+                >
+                  <a href="./transport-agabaritic.html" i18k="navbar.agabaritic"
+                    >TRANSPORT AGABARITIC</a
+                  >
+                </li>
+                <li
+                  data-aos="fade-down"
+                  data-aos-delay="300"
+                  class="hover:text-info hover:underline"
+                  auto
+                >
+                  <a href="./transport-auto.html" i18k="navbar.auto"
+                    >TRANSPORT AUTO</a
+                  >
+                </li>
+                <li
+                  data-aos="fade-down"
+                  data-aos-delay="400"
+                  class="hover:text-info hover:underline"
+                  destinatii
+                >
+                  <a href="./destinatii.html" i18k="navbar.destinations"
+                    >DESTINATII</a
+                  >
+                </li>
+                <li
+                  data-aos="fade-down"
+                  data-aos-delay="500"
+                  class="hover:text-info hover:underline"
+                  parc
+                >
+                  <a href="./parc-auto.html" i18k="navbar.park">PARC AUTO</a>
+                </li>
+                <li
+                  data-aos="fade-down"
+                  data-aos-delay="600"
+                  class="hover:text-info hover:underline"
+                  contacte
+                >
+                  <a href="./contacte.html" i18k="navbar.contacts">CONTACTE</a>
+                </li>
+                <li class="flex gap-4">
+                  <div class="p-2 rounded-xl" id="ro">
+                    <img src="./assets/flags/ro.svg" alt="" />
+                  </div>
+                  <div class="p-2 rounded-xl" id="ru">
+                    <img src="./assets/flags/ru.svg" alt="" />
+                  </div>
+                  <div class="p-2 rounded-xl" id="en">
+                    <img src="./assets/flags/us.svg" alt="" />
+                  </div>
+                </li>
+                <!-- <li class="pt-10">
+                  <ul class="flex flex-col gap-2 items-center justify-center">
+                    <li class="flex gap-4 items-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-phone text-base-100"
+                      >
+                        <path
+                          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                        />
+                      </svg>
+                      <p class="hover:underline font-light">+40 724 483 545</p>
+                    </li>
+                    <li class="flex gap-4 items-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-phone text-base-100"
+                      >
+                        <path
+                          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                        />
+                      </svg>
+                      <p class="hover:underline font-light">+373 68 977 800</p>
+                    </li>
+                    <li class="flex gap-4 items-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-phone text-base-100"
+                      >
+                        <path
+                          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                        />
+                      </svg>
+                      <p class="hover:underline font-light">
+                        +49 152 078 961 52
+                      </p>
+                    </li>
+                  </ul>
+                </li> -->
+              </ul>
+            </div>
+          </div>
+
+          <ul
+            class="hidden xl:flex text-base-100 text-base 2xl:text-lg flex-row gap-10 font-lato font-semibold"
+          >
+            <li
+              data-aos="fade-down"
+              data-aos-delay="100"
+              class="hover:text-info hover:underline"
+              acasa
+            >
+              <a href="./index.html" i18k="navbar.home">ACASA</a>
+            </li>
+            <li
+              data-aos="fade-down"
+              data-aos-delay="200"
+              class="hover:text-info hover:underline"
+              agabaritic
+            >
+              <a href="./transport-agabaritic.html" i18k="navbar.agabaritic"
+                >TRANSPORT AGABARITIC</a
+              >
+            </li>
+            <li
+              data-aos="fade-down"
+              data-aos-delay="300"
+              class="hover:text-info hover:underline"
+              auto
+            >
+              <a href="./transport-auto.html" i18k="navbar.auto"
+                >TRANSPORT AUTO</a
+              >
+            </li>
+            <li
+              data-aos="fade-down"
+              data-aos-delay="400"
+              class="hover:text-info hover:underline"
+              destinatii
+            >
+              <a href="./destinatii.html" i18k="navbar.destinations"
+                >DESTINATII</a
+              >
+            </li>
+            <li
+              data-aos="fade-down"
+              data-aos-delay="500"
+              class="hover:text-info hover:underline"
+              parc
+            >
+              <a href="./parc-auto.html" i18k="navbar.park">PARC AUTO</a>
+            </li>
+            <li
+              data-aos="fade-down"
+              data-aos-delay="600"
+              class="hover:text-info hover:underline"
+              contacte
+            >
+              <a href="./contacte.html" i18k="navbar.contacts">CONTACTE</a>
+            </li>
+          </ul>
+          <ul class="hidden xl:flex justify-end gap-1">
+            <li
+              data-aos="fade-down"
+              data-aos-delay="100"
+              class="p-1 rounded-lg"
+              id="ro"
+            >
+              <img src="./assets/flags/ro.svg" alt="" loading="lazy" />
+            </li>
+            <li
+              data-aos="fade-down"
+              data-aos-delay="150"
+              class="p-1 rounded-lg"
+              id="ru"
+            >
+              <img src="./assets/flags/ru.svg" alt="" loading="lazy" />
+            </li>
+            <li
+              data-aos="fade-down"
+              data-aos-delay="200"
+              class="p-1 rounded-lg"
+              id="en"
+            >
+              <img src="./assets/flags/us.svg" alt="" loading="lazy" />
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- HERO -->
+      <section data-aos="fade-up" class="relative bg-black">
+        <img
+          src="./assets/hero.png"
+          alt=""
+          loading="lazy"
+          class="hidden sm:flex w-full h-screen object-cover object-center"
+        />
+        <img
+          src="./assets/phone_hero.png"
+          alt=""
+          srcset=""
+          class="sm:hidden h-screen object-center object-contain w-screen"
+        />
+        <div
+          class="absolute bottom-20 md:bottom-24 lg:bottom-28 xl:bottom-32 flex justify-center w-full px-10 md:px-14"
+        >
+          <div
+            class="flex flex-col gap-6 md:gap-8 xl:gap-10 2xl:w-1/2 items-center"
+          >
+            <p
+              i18K="hero.desc"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              class="text-base-100 text-base md:text-lg lg:text-xl xl:text-2xl text-center 2xl:w-1/2 font-lato rounded-xl"
+            >
+              ETA-TRUCKLOGISTIC companie de transport international.
+            </p>
+            <div
+              class="flex flex-col md:flex-row gap-6 md:gap-8 xl:gap-10 justify-center w-full"
+            >
+              <a href="./transport-agabaritic.html" class="flex-1 w-full"
+                ><button
+                  i18K="hero.btn2"
+                  data-aos="fade-up"
+                  data-aos-delay="600"
+                  class="btn btn-info text-white text-lg md:text-xl lg:text-2xl h-fit px-10 py-2 2xl:py-4 rounded-xl shadow-2xl shadow-base-100/25 font-lato w-full"
+                >
+                  TRANSPORT <br />AGABARITIC
+                </button></a
+              >
+              <a href="./transport-auto.html" class="flex-1 w-full"
+                ><button
+                  i18K="hero.btn1"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                  class="btn btn-info text-white text-lg md:text-xl lg:text-2xl h-fit px-10 py-2 2xl:py-4 rounded-xl shadow-2xl shadow-base-100/25 font-lato w-full"
+                >
+                  TRANSPORT <br />AUTO
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOU US -->
+      <section data-aos="fade-up" class="relative">
+        <div
+          class="min-h-screen xl:h-screen flex justify-between gap-10 2xl:gap-40 2xl:my-20 3xl:my-0 relative z-30"
+        >
+          <div
+            class="flex-1 flex justify-center items-center px-10 md:px-14 lg:px-20 xl:pl-20 xl:pr-0 2xl:pl-52 relative z-30"
+          >
+            <div class="flex flex-col gap-6 flex-1 py-6 md:py-0">
+              <h1
+                i18K="aboutus.title"
+                data-aos="fade-right"
+                data-aos-delay="300"
+                class="text-4xl md:text-5xl xl:text-6xl text-center font-extrabold font-lato text-base-100 xl:text-neutral"
+              >
+                Despre Noi
+              </h1>
+              <div>
+                <ul
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 2xl:grid-cols-2 gap-4 lg:gap-5 3xl:gap-6"
+                >
+                  <li
+                    data-aos="fade-down"
+                    data-aos-delay="350"
+                    class="flex items-center gap-4 p-4 rounded-2xl shadow-lg border border-neutral/10 bg-base-200 shadow-neutral/50 group bg-opacity-80"
+                  >
+                    <div
+                      class="bg-neutral p-2 lg:p-3 2xl:p-4 w-fit rounded-full shadow-2xl shadow-neutral"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-building-2 text-white size-6 lg:size-9 2xl:size-10"
+                      >
+                        <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
+                        <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
+                        <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
+                        <path d="M10 6h4" />
+                        <path d="M10 10h4" />
+                        <path d="M10 14h4" />
+                        <path d="M10 18h4" />
+                      </svg>
+                    </div>
+                    <h1
+                      i18K="aboutus._1"
+                      class="text-base font-medium text-neutral font-lato"
+                    >
+                      ETA-TRUCKLOGISTIC companie de transport international
+                      înregistrată în Romania, București.
+                    </h1>
+                  </li>
+
+                  <li
+                    data-aos="fade-right"
+                    data-aos-delay="400"
+                    class="flex items-center gap-4 p-4 rounded-2xl shadow-lg border border-neutral/10 bg-base-200 shadow-neutral/50 group bg-opacity-80"
+                  >
+                    <div
+                      class="bg-neutral p-2 lg:p-3 2xl:p-4 w-fit rounded-full shadow-2xl shadow-neutral"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-building-2 text-white size-6 lg:size-9 2xl:size-10"
+                      >
+                        <path
+                          d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"
+                        />
+                        <path d="M15 18H9" />
+                        <path
+                          d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"
+                        />
+                        <circle cx="17" cy="18" r="2" />
+                        <circle cx="7" cy="18" r="2" />
+                      </svg>
+                    </div>
+                    <h1
+                      i18K="aboutus._2"
+                      class="text-base font-medium text-neutral font-lato"
+                    >
+                      ETA-TRUCKLOGISTIC efectuează transport agabaritic, auto,
+                      containere și mărfuri generale în comunitatea Europeană,
+                      Moldova și Ucraina.
+                    </h1>
+                  </li>
+
+                  <li
+                    data-aos="fade-right"
+                    data-aos-delay="450"
+                    class="flex items-center gap-4 p-4 rounded-2xl shadow-lg border border-neutral/10 bg-base-200 shadow-neutral/50 group bg-opacity-80"
+                  >
+                    <div
+                      class="bg-neutral p-2 lg:p-3 2xl:p-4 w-fit rounded-full shadow-2xl shadow-neutral"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-building-2 text-white size-6 lg:size-9 2xl:size-10"
+                      >
+                        <path d="M12 21V7" />
+                        <path d="m16 12 2 2 4-4" />
+                        <path
+                          d="M22 6V4a1 1 0 0 0-1-1h-5a4 4 0 0 0-4 4 4 4 0 0 0-4-4H3a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6a1 1 0 0 0 1-1v-1.3"
+                        />
+                      </svg>
+                    </div>
+                    <h1
+                      i18K="aboutus._3"
+                      class="text-base font-medium text-neutral font-lato"
+                    >
+                      ETA este în colaborare cu compania de asigurări ”LUTZ”,
+                      ceia ce ne permite sa acordăm clienților asigurare CMR cu
+                      o valoare mare și cu posibiliatea de a despăgubi orice
+                      daune în timpul transportului.
+                    </h1>
+                  </li>
+
+                  <li
+                    data-aos="fade-up"
+                    data-aos-delay="500"
+                    class="flex items-center gap-4 p-4 rounded-2xl shadow-lg border border-neutral/10 bg-base-200 shadow-neutral/50 group bg-opacity-80"
+                  >
+                    <div
+                      class="bg-neutral p-2 lg:p-3 2xl:p-4 w-fit rounded-full shadow-2xl shadow-neutral"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-building-2 text-white size-6 lg:size-9 2xl:size-10"
+                      >
+                        <line x1="3" x2="21" y1="22" y2="22" />
+                        <line x1="6" x2="6" y1="18" y2="11" />
+                        <line x1="10" x2="10" y1="18" y2="11" />
+                        <line x1="14" x2="14" y1="18" y2="11" />
+                        <line x1="18" x2="18" y1="18" y2="11" />
+                        <polygon points="12 2 20 7 4 7" />
+                      </svg>
+                    </div>
+
+                    <h1
+                      i18K="aboutus._4"
+                      class="text-base font-medium text-neutral font-lato"
+                    >
+                      ETA deține suplimentar oficiu în Republica Moldova, or.
+                      Chișinău și colaborează cu bancile locale, fapt ce le
+                      permite clienților să achite serviciile și în Republica
+                      Moldova.
+                    </h1>
+                  </li>
+
+                  <li
+                    data-aos="fade-up"
+                    data-aos-delay="550"
+                    class="flex items-center gap-4 p-4 rounded-2xl shadow-lg border border-neutral/10 bg-base-200 shadow-neutral/50 group bg-opacity-80 md:col-span-2 xl:col-span-1 2xl:col-span-2"
+                  >
+                    <div
+                      class="bg-neutral p-2 lg:p-3 2xl:p-4 w-fit rounded-full shadow-2xl shadow-neutral"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-building-2 text-white size-6 lg:size-9 2xl:size-10"
+                      >
+                        <path d="M21.54 15H17a2 2 0 0 0-2 2v4.54" />
+                        <path
+                          d="M7 3.34V5a3 3 0 0 0 3 3a2 2 0 0 1 2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2c0-1.1.9-2 2-2h3.17"
+                        />
+                        <path
+                          d="M11 21.95V18a2 2 0 0 0-2-2a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05"
+                        />
+                        <circle cx="12" cy="12" r="10" />
+                      </svg>
+                    </div>
+                    <h1
+                      i18K="aboutus._5"
+                      class="text-base font-medium text-neutral font-lato"
+                    >
+                      ETA-TRUCKLOGISTIC are o echipa de profesioniști, vorbitori
+                      de mai multe limbi străine cu posibilitatea de a oferi
+                      clienților consultanță și servicii pentru ași achiziționa
+                      mărfurile în străinatate sau pentru a organiza încărcarea
+                      acestora.
+                    </h1>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="hidden xl:flex flex-1 w-full"
+            data-aos="fade-right"
+            data-aos-delay="300"
+          >
+            <img
+              src="./assets/_hero.png"
+              alt=""
+              loading="lazy"
+              class="object-contain w-full"
+            />
+          </div>
+        </div>
+
+        <div
+          class="absolute z-20 top-0 bottom-0 xl:hidden blur-sm backdrop-blur-sm"
+        >
+          <img
+            src="./assets/_hero.png"
+            alt=""
+            loading="lazy"
+            class="h-full object-cover object-center bg-no-repeat brightness-50"
+          />
+        </div>
+      </section>
+
+      <!-- LIST -->
+      <section data-aos="fade-up" class="relative">
+        <div
+          class="h-screen flex flex-row-reverse justify-between gap-20 2xl:gap-40 bg-neutral"
+        >
+          <div
+            class="flex-1 flex justify-center items-center px-10 md:px-14 lg:px-20 xl:pr-20 xl:pl-0 2xl:pr-52 relative z-30"
+          >
+            <ul
+              class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 xl:gap-16 h-fit"
+            >
+              <li
+                data-aos="fade-down"
+                data-aos-delay="400"
+                class="flex items-center gap-4 lg:gap-5 2xl:gap-6 p-4 lg:p-5 2xl:p-6 rounded-2xl shadow-lg shadow-info/10 border border-base-300/25 hover:bg-base-300 hover:shadow-base-300/25 group bg-neutral/80"
+              >
+                <div
+                  class="bg-info p-2 lg:p-3 2xl:p-4 w-fit rounded-full shadow-2xl shadow-neutral"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-building-2 text-white size-6 lg:size-9 2xl:size-10"
+                  >
+                    <path
+                      d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                    />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h1
+                    i18K="insurancecmr"
+                    class="text-base md:text-lg 2xl:text-xl font-bold text-base-100 font-lato group-hover:text-neutral"
+                  >
+                    Insurance CMR:
+                  </h1>
+                  <p
+                    class="text-xs md:text-sm 2xl:text-base font-medium font-lato text-info"
+                  >
+                    1.200.000 EURO
+                  </p>
+                </div>
+              </li>
+
+              <li
+                data-aos="fade-right"
+                data-aos-delay="450"
+                class="flex items-center gap-4 lg:gap-5 2xl:gap-6 p-4 lg:p-5 2xl:p-6 rounded-2xl shadow-lg shadow-info/10 border border-base-300/25 hover:bg-base-300 hover:shadow-base-300/25 group bg-neutral/80"
+              >
+                <div
+                  class="bg-info p-2 lg:p-3 2xl:p-4 w-fit rounded-full shadow-2xl shadow-neutral"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-building-2 text-white size-6 lg:size-9 2xl:size-10"
+                  >
+                    <path
+                      d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17"
+                    />
+                    <path
+                      d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"
+                    />
+                    <path d="m2 16 6 6" />
+                    <circle cx="16" cy="9" r="2.9" />
+                    <circle cx="6" cy="5" r="3" />
+                  </svg>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h1
+                    i18K="payment"
+                    class="text-base md:text-lg 2xl:text-xl font-bold text-base-100 font-lato group-hover:text-neutral"
+                  >
+                    Payment:
+                  </h1>
+                  <p
+                    i18K="meth"
+                    class="text-xs md:text-sm 2xl:text-base font-medium font-lato text-info"
+                  >
+                    Cash, Transfer, Factura
+                  </p>
+                </div>
+              </li>
+
+              <!-- <li
+                data-aos="fade-right"
+                data-aos-delay="500"
+                class="flex items-center gap-4 lg:gap-5 2xl:gap-6 p-4 lg:p-5 2xl:p-6 rounded-2xl shadow-lg shadow-info/10 border border-base-300/25 hover:bg-base-300 hover:shadow-base-300/25 group bg-neutral/80"
+              >
+                <div
+                  class="bg-info p-2 lg:p-3 2xl:p-4 w-fit rounded-full shadow-2xl shadow-neutral"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-building-2 text-white size-6 lg:size-9 2xl:size-10"
+                  >
+                    <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z" />
+                    <path
+                      d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"
+                    />
+                    <path d="M12 3v6" />
+                  </svg>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h1
+                    class="text-base md:text-lg 2xl:text-xl font-bold text-base-100 font-lato group-hover:text-neutral"
+                  >
+                    Transport Colete:
+                  </h1>
+                  <p
+                    class="text-xs md:text-sm 2xl:text-base font-medium font-lato text-info"
+                  >
+                    1.200.000 EURO
+                  </p>
+                </div>
+              </li> -->
+
+              <li
+                data-aos="fade-up"
+                data-aos-delay="550"
+                class="flex items-center gap-4 lg:gap-5 2xl:gap-6 p-4 lg:p-5 2xl:p-6 rounded-2xl shadow-lg shadow-info/10 border border-base-300/25 hover:bg-base-300 hover:shadow-base-300/25 group bg-neutral/80 md:col-span-2"
+              >
+                <div
+                  class="bg-info p-2 lg:p-3 2xl:p-4 w-fit rounded-full shadow-2xl shadow-neutral"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-building-2 text-white size-6 lg:size-9 2xl:size-10"
+                  >
+                    <path
+                      d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+                    />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+
+                <ul
+                  class="grid grid-cols-7 sm:grid-cols-16 font-medium font-lato text-xs md:text-sm 2xl:text-base text-info gap-2"
+                  locales
+                >
+                  <script defer>
+                    const locales = document.querySelector('[locales]');
+                    [
+                      'RO',
+                      'MD',
+                      'H',
+                      'IT',
+                      'KZ',
+                      'SL',
+                      'SK',
+                      'PL',
+                      'D',
+                      'FR',
+                      'ES',
+                      'BE',
+                      'NL',
+                      'DK',
+                      'UK',
+                      'HR',
+                      'SRB',
+                      'TR',
+                      'BG',
+                      'GR',
+                      'LT',
+                      'LV',
+                      'EST',
+                      'NO',
+                      'FI',
+                      'CH',
+                      'IE',
+                      'PT',
+                      'SE',
+                      'AL',
+                      'UA',
+                    ].forEach((locale) => {
+                      const l = document.createElement('li');
+                      l.innerText = locale;
+                      locales.appendChild(l);
+                    });
+                  </script>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            data-aos="fade-right"
+            data-aos-delay="300"
+            class="hidden xl:flex flex-1 h-screen justify-start"
+          >
+            <img
+              src="./assets/rosu.jpg"
+              alt=""
+              loading="lazy"
+              class="object-contain shadow-2xl shadow-neutral"
+            />
+          </div>
+        </div>
+
+        <div
+          class="absolute z-20 top-0 bottom-0 xl:hidden blur-sm backdrop-blur-sm"
+        >
+          <img
+            src="./assets/infos.png"
+            alt=""
+            loading="lazy"
+            class="h-screen object-cover object-center bg-no-repeat brightness-50"
+          />
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer
+        class="bg-gradient-to-r from-base-300 to-base-100 relative px-10 md:px-14 lg:px-20 2xl:px-52 w-full"
+        data-aos="fade-up"
+      >
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 gap-10 relative py-10"
+        >
+          <div data-aos="fade-up">
+            <div
+              class="bg-neutral flex justify-center items-center h-fit w-fit p-6 rounded-xl shadow-xl shadow-neutral/50"
+            >
+              <img
+                src="./assets/logo.svg"
+                alt=""
+                loading="lazy"
+                class="size-20 md:size-24 lg:size-28 xl:size-32 aspect-square"
+              />
+            </div>
+            <h1 class="font-lato mt-4 lg:mt-6 text-sm font-normal">
+              <p>S.C. "ETA-TRUCKLOGISTIC" S.R.L</p>
+              <p i18K="footer.location._1">str. Biruintei 20, Ap.8, sector 1</p>
+              <p i18K="footer.location._2">012128 Bucharest, Romania</p>
+            </h1>
+          </div>
+
+          <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            class="flex flex-col gap-4 lg:gap-6"
+          >
+            <h1
+              class="text-lg md:text-xl xl:text-2xl font-lato font-extrabold text-info"
+              i18K="footer.agabaritic"
+            >
+              Transport Agabaritic
+            </h1>
+            <ul
+              class="text-sm md:text-base font-lato font-medium text-neutral flex flex-col gap-1"
+            >
+              <li class="flex items-center gap-2">
+                + 40 727 878 350
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 48 48"
+                >
+                  <path
+                    fill="#fff"
+                    d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"
+                  ></path>
+                  <path
+                    fill="#fff"
+                    d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"
+                  ></path>
+                  <path
+                    fill="#cfd8dc"
+                    d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"
+                  ></path>
+                  <path
+                    fill="#40c351"
+                    d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"
+                  ></path>
+                  <path
+                    fill="#fff"
+                    fill-rule="evenodd"
+                    d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </li>
+              <li class="flex items-center gap-2">
+                + 373 68 977 800
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 48 48"
+                >
+                  <path
+                    fill="#fff"
+                    d="M24,5C21.361,5,13.33,5,8.89,9.054C6.246,11.688,5,15.494,5,21v3c0,5.506,1.246,9.312,3.921,11.976 c1.332,1.215,3.148,2.186,5.368,2.857L15,39.047v5.328C15,45,15.181,45,15.241,45c0.123,0,0.32-0.039,0.694-0.371 c0.09-0.089,0.75-0.803,3.96-4.399l0.324-0.363l0.485,0.031C21.779,39.965,22.888,40,24,40c2.639,0,10.67,0,15.11-4.055 C41.753,33.311,43,29.505,43,24v-3c0-5.506-1.246-9.312-3.921-11.976C34.67,5,26.639,5,24,5z"
+                  ></path>
+                  <path
+                    fill="#7e57c2"
+                    d="M33.451 28.854c-1.111-.936-1.624-1.219-3.158-2.14C29.654 26.331 28.68 26 28.169 26c-.349 0-.767.267-1.023.523C26.49 27.179 26.275 28 25.125 28c-1.125 0-3.09-1.145-4.5-2.625C19.145 23.965 18 22 18 20.875c0-1.15.806-1.38 1.462-2.037C19.718 18.583 20 18.165 20 17.816c0-.511-.331-1.47-.714-2.109-.921-1.535-1.203-2.048-2.14-3.158-.317-.376-.678-.548-1.056-.549-.639-.001-1.478.316-2.046.739-.854.637-1.747 1.504-1.986 2.584-.032.147-.051.295-.057.443-.046 1.125.396 2.267.873 3.234 1.123 2.279 2.609 4.485 4.226 6.455.517.63 1.08 1.216 1.663 1.782.566.582 1.152 1.145 1.782 1.663 1.97 1.617 4.176 3.103 6.455 4.226.958.472 2.086.906 3.2.874.159-.005.318-.023.477-.058 1.08-.238 1.947-1.132 2.584-1.986.423-.568.74-1.406.739-2.046C33.999 29.532 33.827 29.171 33.451 28.854zM34 24c-.552 0-1-.448-1-1v-1c0-4.962-4.038-9-9-9-.552 0-1-.448-1-1s.448-1 1-1c6.065 0 11 4.935 11 11v1C35 23.552 34.552 24 34 24zM27.858 22c-.444 0-.85-.298-.967-.748-.274-1.051-1.094-1.872-2.141-2.142-.535-.139-.856-.684-.718-1.219.138-.534.682-.855 1.219-.718 1.748.453 3.118 1.822 3.575 3.574.139.535-.181 1.08-.715 1.22C28.026 21.989 27.941 22 27.858 22z"
+                  ></path>
+                  <path
+                    fill="#7e57c2"
+                    d="M31,23c-0.552,0-1-0.448-1-1c0-3.188-2.494-5.818-5.678-5.986c-0.552-0.029-0.975-0.5-0.946-1.051 c0.029-0.552,0.508-0.976,1.051-0.946C28.674,14.241,32,17.748,32,22C32,22.552,31.552,23,31,23z"
+                  ></path>
+                  <path
+                    fill="#7e57c2"
+                    d="M24,4C19.5,4,12.488,4.414,8.216,8.316C5.196,11.323,4,15.541,4,21c0,0.452-0.002,0.956,0.002,1.5 C3.998,23.043,4,23.547,4,23.999c0,5.459,1.196,9.677,4.216,12.684c1.626,1.485,3.654,2.462,5.784,3.106v4.586 C14,45.971,15.049,46,15.241,46h0.009c0.494-0.002,0.921-0.244,1.349-0.624c0.161-0.143,2.02-2.215,4.042-4.481 C21.845,40.972,22.989,41,23.999,41c0,0,0,0,0,0s0,0,0,0c4.5,0,11.511-0.415,15.784-4.317c3.019-3.006,4.216-7.225,4.216-12.684 c0-0.452,0.002-0.956-0.002-1.5c0.004-0.544,0.002-1.047,0.002-1.5c0-5.459-1.196-9.677-4.216-12.684C35.511,4.414,28.5,4,24,4z M41,23.651l0,0.348c0,4.906-1.045,8.249-3.286,10.512C33.832,38,26.437,38,23.999,38c-0.742,0-1.946-0.001-3.367-0.1 C20.237,38.344,16,43.083,16,43.083V37.22c-2.104-0.505-4.183-1.333-5.714-2.708C8.045,32.248,7,28.905,7,23.999l0-0.348 c0-0.351-0.001-0.73,0.002-1.173C6.999,22.078,6.999,21.7,7,21.348L7,21c0-4.906,1.045-8.249,3.286-10.512 C14.167,6.999,21.563,6.999,24,6.999c2.437,0,9.832,0,13.713,3.489c2.242,2.263,3.286,5.606,3.286,10.512l0,0.348 c0,0.351,0.001,0.73-0.002,1.173C41,22.922,41,23.3,41,23.651z"
+                  ></path>
+                </svg>
+              </li>
+              <li class="flex items-center gap-2">
+                + 40 720 330 809<svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 48 48"
+                >
+                  <path
+                    fill="#fff"
+                    d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"
+                  ></path>
+                  <path
+                    fill="#fff"
+                    d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"
+                  ></path>
+                  <path
+                    fill="#cfd8dc"
+                    d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"
+                  ></path>
+                  <path
+                    fill="#40c351"
+                    d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"
+                  ></path>
+                  <path
+                    fill="#fff"
+                    fill-rule="evenodd"
+                    d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </li>
+              <li class="flex items-center gap-2">
+                + 373 689 77 655<svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 48 48"
+                >
+                  <path
+                    fill="#fff"
+                    d="M24,5C21.361,5,13.33,5,8.89,9.054C6.246,11.688,5,15.494,5,21v3c0,5.506,1.246,9.312,3.921,11.976 c1.332,1.215,3.148,2.186,5.368,2.857L15,39.047v5.328C15,45,15.181,45,15.241,45c0.123,0,0.32-0.039,0.694-0.371 c0.09-0.089,0.75-0.803,3.96-4.399l0.324-0.363l0.485,0.031C21.779,39.965,22.888,40,24,40c2.639,0,10.67,0,15.11-4.055 C41.753,33.311,43,29.505,43,24v-3c0-5.506-1.246-9.312-3.921-11.976C34.67,5,26.639,5,24,5z"
+                  ></path>
+                  <path
+                    fill="#7e57c2"
+                    d="M33.451 28.854c-1.111-.936-1.624-1.219-3.158-2.14C29.654 26.331 28.68 26 28.169 26c-.349 0-.767.267-1.023.523C26.49 27.179 26.275 28 25.125 28c-1.125 0-3.09-1.145-4.5-2.625C19.145 23.965 18 22 18 20.875c0-1.15.806-1.38 1.462-2.037C19.718 18.583 20 18.165 20 17.816c0-.511-.331-1.47-.714-2.109-.921-1.535-1.203-2.048-2.14-3.158-.317-.376-.678-.548-1.056-.549-.639-.001-1.478.316-2.046.739-.854.637-1.747 1.504-1.986 2.584-.032.147-.051.295-.057.443-.046 1.125.396 2.267.873 3.234 1.123 2.279 2.609 4.485 4.226 6.455.517.63 1.08 1.216 1.663 1.782.566.582 1.152 1.145 1.782 1.663 1.97 1.617 4.176 3.103 6.455 4.226.958.472 2.086.906 3.2.874.159-.005.318-.023.477-.058 1.08-.238 1.947-1.132 2.584-1.986.423-.568.74-1.406.739-2.046C33.999 29.532 33.827 29.171 33.451 28.854zM34 24c-.552 0-1-.448-1-1v-1c0-4.962-4.038-9-9-9-.552 0-1-.448-1-1s.448-1 1-1c6.065 0 11 4.935 11 11v1C35 23.552 34.552 24 34 24zM27.858 22c-.444 0-.85-.298-.967-.748-.274-1.051-1.094-1.872-2.141-2.142-.535-.139-.856-.684-.718-1.219.138-.534.682-.855 1.219-.718 1.748.453 3.118 1.822 3.575 3.574.139.535-.181 1.08-.715 1.22C28.026 21.989 27.941 22 27.858 22z"
+                  ></path>
+                  <path
+                    fill="#7e57c2"
+                    d="M31,23c-0.552,0-1-0.448-1-1c0-3.188-2.494-5.818-5.678-5.986c-0.552-0.029-0.975-0.5-0.946-1.051 c0.029-0.552,0.508-0.976,1.051-0.946C28.674,14.241,32,17.748,32,22C32,22.552,31.552,23,31,23z"
+                  ></path>
+                  <path
+                    fill="#7e57c2"
+                    d="M24,4C19.5,4,12.488,4.414,8.216,8.316C5.196,11.323,4,15.541,4,21c0,0.452-0.002,0.956,0.002,1.5 C3.998,23.043,4,23.547,4,23.999c0,5.459,1.196,9.677,4.216,12.684c1.626,1.485,3.654,2.462,5.784,3.106v4.586 C14,45.971,15.049,46,15.241,46h0.009c0.494-0.002,0.921-0.244,1.349-0.624c0.161-0.143,2.02-2.215,4.042-4.481 C21.845,40.972,22.989,41,23.999,41c0,0,0,0,0,0s0,0,0,0c4.5,0,11.511-0.415,15.784-4.317c3.019-3.006,4.216-7.225,4.216-12.684 c0-0.452,0.002-0.956-0.002-1.5c0.004-0.544,0.002-1.047,0.002-1.5c0-5.459-1.196-9.677-4.216-12.684C35.511,4.414,28.5,4,24,4z M41,23.651l0,0.348c0,4.906-1.045,8.249-3.286,10.512C33.832,38,26.437,38,23.999,38c-0.742,0-1.946-0.001-3.367-0.1 C20.237,38.344,16,43.083,16,43.083V37.22c-2.104-0.505-4.183-1.333-5.714-2.708C8.045,32.248,7,28.905,7,23.999l0-0.348 c0-0.351-0.001-0.73,0.002-1.173C6.999,22.078,6.999,21.7,7,21.348L7,21c0-4.906,1.045-8.249,3.286-10.512 C14.167,6.999,21.563,6.999,24,6.999c2.437,0,9.832,0,13.713,3.489c2.242,2.263,3.286,5.606,3.286,10.512l0,0.348 c0,0.351,0.001,0.73-0.002,1.173C41,22.922,41,23.3,41,23.651z"
+                  ></path>
+                </svg>
+              </li>
+              <li>
+                <a href="mailto:sau.anton@eta-truck.ro"
+                  >sau.anton@eta-truck.ro</a
+                >
+              </li>
+              <li>
+                <a href="mailto:lesnic.danu@eta-truck.ro"
+                  >lesnic.danu@eta-truck.ro</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div
+            data-aos="fade-up"
+            data-aos-delay="150"
+            class="flex flex-col gap-4 lg:gap-6"
+          >
+            <h1
+              class="text-lg md:text-xl xl:text-2xl font-lato font-extrabold text-info"
+              i18K="footer.auto"
+            >
+              Transport Auto
+            </h1>
+            <ul
+              class="text-sm md:text-base font-lato font-medium text-neutral flex flex-col gap-1"
+            >
+              <li class="flex items-center gap-2">
+                + 49 1520 7896152<svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 48 48"
+                >
+                  <path
+                    fill="#fff"
+                    d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"
+                  ></path>
+                  <path
+                    fill="#fff"
+                    d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"
+                  ></path>
+                  <path
+                    fill="#cfd8dc"
+                    d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"
+                  ></path>
+                  <path
+                    fill="#40c351"
+                    d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"
+                  ></path>
+                  <path
+                    fill="#fff"
+                    fill-rule="evenodd"
+                    d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </li>
+              <li class="flex items-center gap-2">
+                + 40 728 133912<svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 48 48"
+                >
+                  <path
+                    fill="#fff"
+                    d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"
+                  ></path>
+                  <path
+                    fill="#fff"
+                    d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"
+                  ></path>
+                  <path
+                    fill="#cfd8dc"
+                    d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"
+                  ></path>
+                  <path
+                    fill="#40c351"
+                    d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"
+                  ></path>
+                  <path
+                    fill="#fff"
+                    fill-rule="evenodd"
+                    d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </li>
+              <li class="flex items-center gap-2">
+                + 373 787 88 558<svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 48 48"
+                >
+                  <path
+                    fill="#fff"
+                    d="M24,5C21.361,5,13.33,5,8.89,9.054C6.246,11.688,5,15.494,5,21v3c0,5.506,1.246,9.312,3.921,11.976 c1.332,1.215,3.148,2.186,5.368,2.857L15,39.047v5.328C15,45,15.181,45,15.241,45c0.123,0,0.32-0.039,0.694-0.371 c0.09-0.089,0.75-0.803,3.96-4.399l0.324-0.363l0.485,0.031C21.779,39.965,22.888,40,24,40c2.639,0,10.67,0,15.11-4.055 C41.753,33.311,43,29.505,43,24v-3c0-5.506-1.246-9.312-3.921-11.976C34.67,5,26.639,5,24,5z"
+                  ></path>
+                  <path
+                    fill="#7e57c2"
+                    d="M33.451 28.854c-1.111-.936-1.624-1.219-3.158-2.14C29.654 26.331 28.68 26 28.169 26c-.349 0-.767.267-1.023.523C26.49 27.179 26.275 28 25.125 28c-1.125 0-3.09-1.145-4.5-2.625C19.145 23.965 18 22 18 20.875c0-1.15.806-1.38 1.462-2.037C19.718 18.583 20 18.165 20 17.816c0-.511-.331-1.47-.714-2.109-.921-1.535-1.203-2.048-2.14-3.158-.317-.376-.678-.548-1.056-.549-.639-.001-1.478.316-2.046.739-.854.637-1.747 1.504-1.986 2.584-.032.147-.051.295-.057.443-.046 1.125.396 2.267.873 3.234 1.123 2.279 2.609 4.485 4.226 6.455.517.63 1.08 1.216 1.663 1.782.566.582 1.152 1.145 1.782 1.663 1.97 1.617 4.176 3.103 6.455 4.226.958.472 2.086.906 3.2.874.159-.005.318-.023.477-.058 1.08-.238 1.947-1.132 2.584-1.986.423-.568.74-1.406.739-2.046C33.999 29.532 33.827 29.171 33.451 28.854zM34 24c-.552 0-1-.448-1-1v-1c0-4.962-4.038-9-9-9-.552 0-1-.448-1-1s.448-1 1-1c6.065 0 11 4.935 11 11v1C35 23.552 34.552 24 34 24zM27.858 22c-.444 0-.85-.298-.967-.748-.274-1.051-1.094-1.872-2.141-2.142-.535-.139-.856-.684-.718-1.219.138-.534.682-.855 1.219-.718 1.748.453 3.118 1.822 3.575 3.574.139.535-.181 1.08-.715 1.22C28.026 21.989 27.941 22 27.858 22z"
+                  ></path>
+                  <path
+                    fill="#7e57c2"
+                    d="M31,23c-0.552,0-1-0.448-1-1c0-3.188-2.494-5.818-5.678-5.986c-0.552-0.029-0.975-0.5-0.946-1.051 c0.029-0.552,0.508-0.976,1.051-0.946C28.674,14.241,32,17.748,32,22C32,22.552,31.552,23,31,23z"
+                  ></path>
+                  <path
+                    fill="#7e57c2"
+                    d="M24,4C19.5,4,12.488,4.414,8.216,8.316C5.196,11.323,4,15.541,4,21c0,0.452-0.002,0.956,0.002,1.5 C3.998,23.043,4,23.547,4,23.999c0,5.459,1.196,9.677,4.216,12.684c1.626,1.485,3.654,2.462,5.784,3.106v4.586 C14,45.971,15.049,46,15.241,46h0.009c0.494-0.002,0.921-0.244,1.349-0.624c0.161-0.143,2.02-2.215,4.042-4.481 C21.845,40.972,22.989,41,23.999,41c0,0,0,0,0,0s0,0,0,0c4.5,0,11.511-0.415,15.784-4.317c3.019-3.006,4.216-7.225,4.216-12.684 c0-0.452,0.002-0.956-0.002-1.5c0.004-0.544,0.002-1.047,0.002-1.5c0-5.459-1.196-9.677-4.216-12.684C35.511,4.414,28.5,4,24,4z M41,23.651l0,0.348c0,4.906-1.045,8.249-3.286,10.512C33.832,38,26.437,38,23.999,38c-0.742,0-1.946-0.001-3.367-0.1 C20.237,38.344,16,43.083,16,43.083V37.22c-2.104-0.505-4.183-1.333-5.714-2.708C8.045,32.248,7,28.905,7,23.999l0-0.348 c0-0.351-0.001-0.73,0.002-1.173C6.999,22.078,6.999,21.7,7,21.348L7,21c0-4.906,1.045-8.249,3.286-10.512 C14.167,6.999,21.563,6.999,24,6.999c2.437,0,9.832,0,13.713,3.489c2.242,2.263,3.286,5.606,3.286,10.512l0,0.348 c0,0.351,0.001,0.73-0.002,1.173C41,22.922,41,23.3,41,23.651z"
+                  ></path>
+                </svg>
+              </li>
+              <li>
+                <a href="mailto:stejar.v@eta-truck.ro">stejar.v@eta-truck.ro</a>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            class="flex flex-col gap-4 lg:gap-6"
+          >
+            <h1
+              class="text-lg md:text-xl xl:text-2xl font-lato font-extrabold text-info"
+              i18K="footer.invoice"
+            >
+              Invoice
+            </h1>
+            <ul
+              class="text-sm md:text-base font-lato font-medium text-neutral flex flex-col gap-1"
+            >
+              <li class="flex items-center gap-2">
+                + 373 689 66 634<svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 48 48"
+                >
+                  <path
+                    fill="#fff"
+                    d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"
+                  ></path>
+                  <path
+                    fill="#fff"
+                    d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"
+                  ></path>
+                  <path
+                    fill="#cfd8dc"
+                    d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"
+                  ></path>
+                  <path
+                    fill="#40c351"
+                    d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"
+                  ></path>
+                  <path
+                    fill="#fff"
+                    fill-rule="evenodd"
+                    d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z"
+                    clip-rule="evenodd"
+                  ></path></svg
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 48 48"
+                >
+                  <path
+                    fill="#fff"
+                    d="M24,5C21.361,5,13.33,5,8.89,9.054C6.246,11.688,5,15.494,5,21v3c0,5.506,1.246,9.312,3.921,11.976 c1.332,1.215,3.148,2.186,5.368,2.857L15,39.047v5.328C15,45,15.181,45,15.241,45c0.123,0,0.32-0.039,0.694-0.371 c0.09-0.089,0.75-0.803,3.96-4.399l0.324-0.363l0.485,0.031C21.779,39.965,22.888,40,24,40c2.639,0,10.67,0,15.11-4.055 C41.753,33.311,43,29.505,43,24v-3c0-5.506-1.246-9.312-3.921-11.976C34.67,5,26.639,5,24,5z"
+                  ></path>
+                  <path
+                    fill="#7e57c2"
+                    d="M33.451 28.854c-1.111-.936-1.624-1.219-3.158-2.14C29.654 26.331 28.68 26 28.169 26c-.349 0-.767.267-1.023.523C26.49 27.179 26.275 28 25.125 28c-1.125 0-3.09-1.145-4.5-2.625C19.145 23.965 18 22 18 20.875c0-1.15.806-1.38 1.462-2.037C19.718 18.583 20 18.165 20 17.816c0-.511-.331-1.47-.714-2.109-.921-1.535-1.203-2.048-2.14-3.158-.317-.376-.678-.548-1.056-.549-.639-.001-1.478.316-2.046.739-.854.637-1.747 1.504-1.986 2.584-.032.147-.051.295-.057.443-.046 1.125.396 2.267.873 3.234 1.123 2.279 2.609 4.485 4.226 6.455.517.63 1.08 1.216 1.663 1.782.566.582 1.152 1.145 1.782 1.663 1.97 1.617 4.176 3.103 6.455 4.226.958.472 2.086.906 3.2.874.159-.005.318-.023.477-.058 1.08-.238 1.947-1.132 2.584-1.986.423-.568.74-1.406.739-2.046C33.999 29.532 33.827 29.171 33.451 28.854zM34 24c-.552 0-1-.448-1-1v-1c0-4.962-4.038-9-9-9-.552 0-1-.448-1-1s.448-1 1-1c6.065 0 11 4.935 11 11v1C35 23.552 34.552 24 34 24zM27.858 22c-.444 0-.85-.298-.967-.748-.274-1.051-1.094-1.872-2.141-2.142-.535-.139-.856-.684-.718-1.219.138-.534.682-.855 1.219-.718 1.748.453 3.118 1.822 3.575 3.574.139.535-.181 1.08-.715 1.22C28.026 21.989 27.941 22 27.858 22z"
+                  ></path>
+                  <path
+                    fill="#7e57c2"
+                    d="M31,23c-0.552,0-1-0.448-1-1c0-3.188-2.494-5.818-5.678-5.986c-0.552-0.029-0.975-0.5-0.946-1.051 c0.029-0.552,0.508-0.976,1.051-0.946C28.674,14.241,32,17.748,32,22C32,22.552,31.552,23,31,23z"
+                  ></path>
+                  <path
+                    fill="#7e57c2"
+                    d="M24,4C19.5,4,12.488,4.414,8.216,8.316C5.196,11.323,4,15.541,4,21c0,0.452-0.002,0.956,0.002,1.5 C3.998,23.043,4,23.547,4,23.999c0,5.459,1.196,9.677,4.216,12.684c1.626,1.485,3.654,2.462,5.784,3.106v4.586 C14,45.971,15.049,46,15.241,46h0.009c0.494-0.002,0.921-0.244,1.349-0.624c0.161-0.143,2.02-2.215,4.042-4.481 C21.845,40.972,22.989,41,23.999,41c0,0,0,0,0,0s0,0,0,0c4.5,0,11.511-0.415,15.784-4.317c3.019-3.006,4.216-7.225,4.216-12.684 c0-0.452,0.002-0.956-0.002-1.5c0.004-0.544,0.002-1.047,0.002-1.5c0-5.459-1.196-9.677-4.216-12.684C35.511,4.414,28.5,4,24,4z M41,23.651l0,0.348c0,4.906-1.045,8.249-3.286,10.512C33.832,38,26.437,38,23.999,38c-0.742,0-1.946-0.001-3.367-0.1 C20.237,38.344,16,43.083,16,43.083V37.22c-2.104-0.505-4.183-1.333-5.714-2.708C8.045,32.248,7,28.905,7,23.999l0-0.348 c0-0.351-0.001-0.73,0.002-1.173C6.999,22.078,6.999,21.7,7,21.348L7,21c0-4.906,1.045-8.249,3.286-10.512 C14.167,6.999,21.563,6.999,24,6.999c2.437,0,9.832,0,13.713,3.489c2.242,2.263,3.286,5.606,3.286,10.512l0,0.348 c0,0.351,0.001,0.73-0.002,1.173C41,22.922,41,23.3,41,23.651z"
+                  ></path>
+                </svg>
+              </li>
+              <li class="flex items-center gap-2">
+                + 40 727 878 426<svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 48 48"
+                >
+                  <path
+                    fill="#fff"
+                    d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"
+                  ></path>
+                  <path
+                    fill="#fff"
+                    d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"
+                  ></path>
+                  <path
+                    fill="#cfd8dc"
+                    d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"
+                  ></path>
+                  <path
+                    fill="#40c351"
+                    d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"
+                  ></path>
+                  <path
+                    fill="#fff"
+                    fill-rule="evenodd"
+                    d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </li>
+              <li class="flex items-center gap-2">
+                + 373 689 59 977<svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 48 48"
+                >
+                  <path
+                    fill="#fff"
+                    d="M24,5C21.361,5,13.33,5,8.89,9.054C6.246,11.688,5,15.494,5,21v3c0,5.506,1.246,9.312,3.921,11.976 c1.332,1.215,3.148,2.186,5.368,2.857L15,39.047v5.328C15,45,15.181,45,15.241,45c0.123,0,0.32-0.039,0.694-0.371 c0.09-0.089,0.75-0.803,3.96-4.399l0.324-0.363l0.485,0.031C21.779,39.965,22.888,40,24,40c2.639,0,10.67,0,15.11-4.055 C41.753,33.311,43,29.505,43,24v-3c0-5.506-1.246-9.312-3.921-11.976C34.67,5,26.639,5,24,5z"
+                  ></path>
+                  <path
+                    fill="#7e57c2"
+                    d="M33.451 28.854c-1.111-.936-1.624-1.219-3.158-2.14C29.654 26.331 28.68 26 28.169 26c-.349 0-.767.267-1.023.523C26.49 27.179 26.275 28 25.125 28c-1.125 0-3.09-1.145-4.5-2.625C19.145 23.965 18 22 18 20.875c0-1.15.806-1.38 1.462-2.037C19.718 18.583 20 18.165 20 17.816c0-.511-.331-1.47-.714-2.109-.921-1.535-1.203-2.048-2.14-3.158-.317-.376-.678-.548-1.056-.549-.639-.001-1.478.316-2.046.739-.854.637-1.747 1.504-1.986 2.584-.032.147-.051.295-.057.443-.046 1.125.396 2.267.873 3.234 1.123 2.279 2.609 4.485 4.226 6.455.517.63 1.08 1.216 1.663 1.782.566.582 1.152 1.145 1.782 1.663 1.97 1.617 4.176 3.103 6.455 4.226.958.472 2.086.906 3.2.874.159-.005.318-.023.477-.058 1.08-.238 1.947-1.132 2.584-1.986.423-.568.74-1.406.739-2.046C33.999 29.532 33.827 29.171 33.451 28.854zM34 24c-.552 0-1-.448-1-1v-1c0-4.962-4.038-9-9-9-.552 0-1-.448-1-1s.448-1 1-1c6.065 0 11 4.935 11 11v1C35 23.552 34.552 24 34 24zM27.858 22c-.444 0-.85-.298-.967-.748-.274-1.051-1.094-1.872-2.141-2.142-.535-.139-.856-.684-.718-1.219.138-.534.682-.855 1.219-.718 1.748.453 3.118 1.822 3.575 3.574.139.535-.181 1.08-.715 1.22C28.026 21.989 27.941 22 27.858 22z"
+                  ></path>
+                  <path
+                    fill="#7e57c2"
+                    d="M31,23c-0.552,0-1-0.448-1-1c0-3.188-2.494-5.818-5.678-5.986c-0.552-0.029-0.975-0.5-0.946-1.051 c0.029-0.552,0.508-0.976,1.051-0.946C28.674,14.241,32,17.748,32,22C32,22.552,31.552,23,31,23z"
+                  ></path>
+                  <path
+                    fill="#7e57c2"
+                    d="M24,4C19.5,4,12.488,4.414,8.216,8.316C5.196,11.323,4,15.541,4,21c0,0.452-0.002,0.956,0.002,1.5 C3.998,23.043,4,23.547,4,23.999c0,5.459,1.196,9.677,4.216,12.684c1.626,1.485,3.654,2.462,5.784,3.106v4.586 C14,45.971,15.049,46,15.241,46h0.009c0.494-0.002,0.921-0.244,1.349-0.624c0.161-0.143,2.02-2.215,4.042-4.481 C21.845,40.972,22.989,41,23.999,41c0,0,0,0,0,0s0,0,0,0c4.5,0,11.511-0.415,15.784-4.317c3.019-3.006,4.216-7.225,4.216-12.684 c0-0.452,0.002-0.956-0.002-1.5c0.004-0.544,0.002-1.047,0.002-1.5c0-5.459-1.196-9.677-4.216-12.684C35.511,4.414,28.5,4,24,4z M41,23.651l0,0.348c0,4.906-1.045,8.249-3.286,10.512C33.832,38,26.437,38,23.999,38c-0.742,0-1.946-0.001-3.367-0.1 C20.237,38.344,16,43.083,16,43.083V37.22c-2.104-0.505-4.183-1.333-5.714-2.708C8.045,32.248,7,28.905,7,23.999l0-0.348 c0-0.351-0.001-0.73,0.002-1.173C6.999,22.078,6.999,21.7,7,21.348L7,21c0-4.906,1.045-8.249,3.286-10.512 C14.167,6.999,21.563,6.999,24,6.999c2.437,0,9.832,0,13.713,3.489c2.242,2.263,3.286,5.606,3.286,10.512l0,0.348 c0,0.351,0.001,0.73-0.002,1.173C41,22.922,41,23.3,41,23.651z"
+                  ></path>
+                </svg>
+              </li>
+              <li>
+                <a href="mailto:invoice@eta-truck.ro">invoice@eta-truck.ro</a>
+              </li>
+              <li>
+                <a href="mailto:eta.expedition@gmail.com"
+                  >eta.expedition@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div
+            data-aos="fade-up"
+            data-aos-delay="250"
+            class="flex flex-col gap-4 lg:gap-6"
+          >
+            <h1
+              class="text-lg md:text-xl xl:text-2xl font-lato font-extrabold text-info"
+              i18K="footer.admin"
+            >
+              Administrare
+            </h1>
+            <ul
+              class="text-sm md:text-base font-lato font-medium text-neutral flex flex-col gap-1"
+            >
+              <li class="flex items-center gap-2">
+                + 40 724 483 545<svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 48 48"
+                >
+                  <path
+                    fill="#fff"
+                    d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"
+                  ></path>
+                  <path
+                    fill="#fff"
+                    d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"
+                  ></path>
+                  <path
+                    fill="#cfd8dc"
+                    d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"
+                  ></path>
+                  <path
+                    fill="#40c351"
+                    d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"
+                  ></path>
+                  <path
+                    fill="#fff"
+                    fill-rule="evenodd"
+                    d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </li>
+              <li class="flex items-center gap-2">
+                + 373 69 519 136<svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 48 48"
+                >
+                  <path
+                    fill="#fff"
+                    d="M24,5C21.361,5,13.33,5,8.89,9.054C6.246,11.688,5,15.494,5,21v3c0,5.506,1.246,9.312,3.921,11.976 c1.332,1.215,3.148,2.186,5.368,2.857L15,39.047v5.328C15,45,15.181,45,15.241,45c0.123,0,0.32-0.039,0.694-0.371 c0.09-0.089,0.75-0.803,3.96-4.399l0.324-0.363l0.485,0.031C21.779,39.965,22.888,40,24,40c2.639,0,10.67,0,15.11-4.055 C41.753,33.311,43,29.505,43,24v-3c0-5.506-1.246-9.312-3.921-11.976C34.67,5,26.639,5,24,5z"
+                  ></path>
+                  <path
+                    fill="#7e57c2"
+                    d="M33.451 28.854c-1.111-.936-1.624-1.219-3.158-2.14C29.654 26.331 28.68 26 28.169 26c-.349 0-.767.267-1.023.523C26.49 27.179 26.275 28 25.125 28c-1.125 0-3.09-1.145-4.5-2.625C19.145 23.965 18 22 18 20.875c0-1.15.806-1.38 1.462-2.037C19.718 18.583 20 18.165 20 17.816c0-.511-.331-1.47-.714-2.109-.921-1.535-1.203-2.048-2.14-3.158-.317-.376-.678-.548-1.056-.549-.639-.001-1.478.316-2.046.739-.854.637-1.747 1.504-1.986 2.584-.032.147-.051.295-.057.443-.046 1.125.396 2.267.873 3.234 1.123 2.279 2.609 4.485 4.226 6.455.517.63 1.08 1.216 1.663 1.782.566.582 1.152 1.145 1.782 1.663 1.97 1.617 4.176 3.103 6.455 4.226.958.472 2.086.906 3.2.874.159-.005.318-.023.477-.058 1.08-.238 1.947-1.132 2.584-1.986.423-.568.74-1.406.739-2.046C33.999 29.532 33.827 29.171 33.451 28.854zM34 24c-.552 0-1-.448-1-1v-1c0-4.962-4.038-9-9-9-.552 0-1-.448-1-1s.448-1 1-1c6.065 0 11 4.935 11 11v1C35 23.552 34.552 24 34 24zM27.858 22c-.444 0-.85-.298-.967-.748-.274-1.051-1.094-1.872-2.141-2.142-.535-.139-.856-.684-.718-1.219.138-.534.682-.855 1.219-.718 1.748.453 3.118 1.822 3.575 3.574.139.535-.181 1.08-.715 1.22C28.026 21.989 27.941 22 27.858 22z"
+                  ></path>
+                  <path
+                    fill="#7e57c2"
+                    d="M31,23c-0.552,0-1-0.448-1-1c0-3.188-2.494-5.818-5.678-5.986c-0.552-0.029-0.975-0.5-0.946-1.051 c0.029-0.552,0.508-0.976,1.051-0.946C28.674,14.241,32,17.748,32,22C32,22.552,31.552,23,31,23z"
+                  ></path>
+                  <path
+                    fill="#7e57c2"
+                    d="M24,4C19.5,4,12.488,4.414,8.216,8.316C5.196,11.323,4,15.541,4,21c0,0.452-0.002,0.956,0.002,1.5 C3.998,23.043,4,23.547,4,23.999c0,5.459,1.196,9.677,4.216,12.684c1.626,1.485,3.654,2.462,5.784,3.106v4.586 C14,45.971,15.049,46,15.241,46h0.009c0.494-0.002,0.921-0.244,1.349-0.624c0.161-0.143,2.02-2.215,4.042-4.481 C21.845,40.972,22.989,41,23.999,41c0,0,0,0,0,0s0,0,0,0c4.5,0,11.511-0.415,15.784-4.317c3.019-3.006,4.216-7.225,4.216-12.684 c0-0.452,0.002-0.956-0.002-1.5c0.004-0.544,0.002-1.047,0.002-1.5c0-5.459-1.196-9.677-4.216-12.684C35.511,4.414,28.5,4,24,4z M41,23.651l0,0.348c0,4.906-1.045,8.249-3.286,10.512C33.832,38,26.437,38,23.999,38c-0.742,0-1.946-0.001-3.367-0.1 C20.237,38.344,16,43.083,16,43.083V37.22c-2.104-0.505-4.183-1.333-5.714-2.708C8.045,32.248,7,28.905,7,23.999l0-0.348 c0-0.351-0.001-0.73,0.002-1.173C6.999,22.078,6.999,21.7,7,21.348L7,21c0-4.906,1.045-8.249,3.286-10.512 C14.167,6.999,21.563,6.999,24,6.999c2.437,0,9.832,0,13.713,3.489c2.242,2.263,3.286,5.606,3.286,10.512l0,0.348 c0,0.351,0.001,0.73-0.002,1.173C41,22.922,41,23.3,41,23.651z"
+                  ></path>
+                </svg>
+              </li>
+              <li>
+                <a href="mailto:etatrucklogistic@gmail.com"
+                  >etatrucklogistic@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="absolute text-black bottom-10 right-0 bg-info rounded-full p-2 hover:bg-info/75"
+            _scroll_top
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-up text-white size-8"
+            >
+              <path d="m5 12 7-7 7 7" />
+              <path d="M12 19V5" />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="border-t border-neutral/20 flex flex-col md:flex-row md:items-center gap-2 justify-between py-2"
+        >
+          <p class="text-xs md:text-sm">
+            Copyright © 2024 All rights reserved.
+          </p>
+
+          <div
+            class="bg-neutral flex p-1 rounded-lg px-4 hover:bg-neutral/20 w-fit"
+          >
+            <p
+              class="text-xs md:text-sm flex bg-gradient-to-r from-primary to-info text-transparent bg-clip-text items-center gap-2"
+            >
+              Made By<svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-code-xml text-info"
+              >
+                <path d="m18 16 4-4-4-4" />
+                <path d="m6 8-4 4 4 4" />
+                <path d="m14.5 4-5 16" /></svg
+              ><strong>ComPare</strong>
+            </p>
+          </div>
+        </div>
+      </footer>
+
+      <!-- BTNS SOCIALS -->
+      <!-- <script src="./js/components/btnsocials.js"></script> -->
+      <script src="./js/components/socials.js?v=0.1"></script>
+      <script>
+        document
+          .querySelectorAll('[acasa]')
+          .forEach((e) => e.classList.add('text-info'));
+      </script>
+    </main>
+  </body>
+</html>
