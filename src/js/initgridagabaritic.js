@@ -8,6 +8,7 @@ const grid = document.querySelector("[grid]");
   grid.innerHTML = imgs
     .map((i, _) => {
       return `<div
+          key=${_}
             data-aos="fade-down"
             data-aos-delay="${_ % 2 === 0 ? "250" : "500"}"
             grid_img="${_ + 1}"
